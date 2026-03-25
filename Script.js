@@ -21,9 +21,7 @@ var capaCV = new ol.layer.Vector({
       dataProjection: 'EPSG:4326',
       featureProjection: 'EPSG:3857'
     }),
-    url: function(extent) {
-      return 'http://localhost:8081/geoserver/ows?' +
-        'service=WFS&version=1.0.0&request=GetFeature&typeName=sandy_cvstorymap:perfil_personal&outputFormat=application/json';
+    url: Perfil.json{
     },
     strategy: ol.loadingstrategy.all
   }),
