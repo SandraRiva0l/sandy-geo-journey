@@ -21,8 +21,7 @@ var capaCV = new ol.layer.Vector({
       dataProjection: 'EPSG:4326',
       featureProjection: 'EPSG:3857'
     }),
-    url: Perfil.json{
-    },
+    url: 'Perfil.json',
     strategy: ol.loadingstrategy.all
   }),
   style: estiloPunto
