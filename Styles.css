@@ -1,0 +1,61 @@
+html, body {
+  margin:0;
+  padding:0;
+}
+
+/* MAPA */
+#map {
+  width:100%;
+  height:100vh;
+}
+
+/* BOTÓN */
+#toggleBtn {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  z-index: 2000; /* IMPORTANTE */
+  background: #c084fc;
+  border: none;
+  padding: 10px;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+/* SIDEBAR */
+#sidebar {
+  position: absolute;
+  top: 0;
+  left: -300px;
+  width: 300px;
+  height: 100%;
+  background: #f5f3ff;
+  box-shadow: 2px 0 10px rgba(0,0,0,0.2);
+  padding: 20px;
+  transition: 0.3s;
+  z-index: 1500;
+}
+
+#sidebar.active {
+  left: 0;
+}
+
+/* CARDS */
+.card {
+  background: white;
+  padding: 10px;
+  margin-top: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.card:hover {
+  background: #ede9fe;
+}
+
+.card-img {
+  width: 100%;
+  border-radius: 10px;
+  margin-top: 10px;
+}
