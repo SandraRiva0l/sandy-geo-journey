@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV Geoespacial - Sandy Story Map</title>
+    
+    <!-- Bootstrap CSS + Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    
+    <!-- OpenLayers -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/ol@7.3.0/ol.css">
+    <link rel="stylesheet" href="Styles.css">
+</head>
+<body>
+
+    <!-- SIDEBAR IZQUIERDA (oculta por defecto) -->
+    <div id="sidebar" class="bg-dark text-white p-3">
+        <div class="d-flex justify-content-between align-items-center mb-4">
+            <h4><i class="bi bi-geo-alt-fill"></i> Sandy Geo Journey</h4>
+            <button id="closeSidebar" class="btn btn-sm btn-outline-light">✕</button>
+        </div>
+        
+        <!-- Perfil -->
+        <div class="card bg-secondary text-white mb-3" onclick="goToLocation(-100.96, 22.16)">
+            <img src="fotos/sANDY1.jpg" class="card-img-top" alt="Perfil">
+            <div class="card-body">
+                <h5 class="card-title">📍 San Luis Potosí</h5>
+                <p class="card-text small">Ingeniera Geomática | Análisis SIG | Story Maps</p>
+            </div>
+        </div>
+        
+        <!-- Más tarjetas de experiencias -->
+
+        <!-- Tarjeta para la península -->
+<div class="card bg-secondary text-white mb-2" onclick="goToYucatanPeninsula()">
+    <div class="card-body">
+        <div class="d-flex align-items-center">
+            <i class="bi bi-briefcase-fill fs-4 me-2"></i>
+            <div>
+                <h6 class="mb-0">Experiencia Laboral</h6>
+                <small class="text-white-50">
+                    </i> 🚂 Tren Maya | Salvamento Arqueológico
+                </small>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Tarjeta de Educación - Zona Universitaria -->
+<div class="card bg-secondary text-white mb-3" onclick="goToZonaUniversitaria()">
+    <div class="card-body">
+        <h5 class="card-title">🎓 Universidad</h5>
+        <p class="card-text">UASLP - Zona Universitaria</p>
+    </div>
+</div>
+      </div>  
+        
+    
+
+    <!-- BOTÓN TOGGLE SIDEBAR -->
+    <button id="toggleBtn" class="btn btn-primary rounded-circle shadow">
+        <i class="bi bi-list fs-4"></i>
+    </button>
+
+    <!-- MAPA -->
+    <div id="map"></div>
+
+    <!-- BARRA INFERIOR (PORTFOLIO) -->
+    <div class="portfolio-bar">
+        <div class="container-fluid py-2">
+            <div class="d-flex justify-content-between align-items-center">
+                <h5 class="text-white mb-0">
+                    <i class="bi bi-journal-bookmark-fill"></i> Mi Portafolio Geoespacial
+                </h5>
+                <button id="togglePortfolio" class="btn btn-sm btn-outline-light">
+                    <i class="bi bi-chevron-down"></i>
+                </button>
+            </div>
+            
+            <!-- Contenido colapsable del portafolio -->
+            <div id="portfolioContent" class="row mt-3 g-2" style="display: none;">
+                <div class="col-md-3 col-6">
+                    <div class="card bg-dark text-white h-100" onclick="showProject(1)">
+                        <img src="fotos/proyecto1.jpg" class="card-img-top" alt="Proyecto 1">
+                        <div class="card-body p-2">
+                            <small class="fw-bold">Mapa de Riesgos</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6">
+                    <div class="card bg-dark text-white h-100" onclick="showProject(2)">
+                        <div class="card-body p-2 text-center">
+                            <i class="bi bi-diagram-3 fs-1"></i>
+                            <small>Análisis de Redes</small>
+                        </div>
+                    </div>
+                </div>
+                <!-- Agrega más proyectos -->
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/ol@7.3.0/dist/ol.js"></script>
+    <script src="Script.js"></script>
+</body>
+</html>
